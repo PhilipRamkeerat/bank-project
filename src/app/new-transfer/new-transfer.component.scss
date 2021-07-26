@@ -1,4 +1,4 @@
-.formulario {
+.form {
   background-color: white;
   padding: 16px;
   border-radius: 4px;
@@ -32,11 +32,11 @@
   }
 }
 
-.botao-wrapper {
+.button-wrapper {
   display: flex;
 }
 
-.botao {
+.button {
   background-color: var(--primary);
   color: white;
   display: block;
