@@ -1,6 +1,7 @@
-<h1>
-  Bank system
+<h1 class="bank-title">
+  BANK STUDY SYSTEM
 </h1>
 <app-new-transfer (transferEvent)="transfer($event)"></app-new-transfer>
-<p>Value: {{transferObj?.value }}</p>
-<p>Destiny {{transferObj?.destiny}}</p>
+<app-extract [transferObj]="transferences"></app-extract>
+
+
