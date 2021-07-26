@@ -6,7 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./new-transfer.component.scss'],
 })
 export class NewTransferComponent {
+  value: number;
+  destiny: number;
+
   public makeTransfer(): any {
     console.log('new transfer requested');
+    console.log('Valor: ', this.value);
+    console.log('Valor: ', this.destiny);
   }
 }
