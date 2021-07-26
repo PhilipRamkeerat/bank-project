@@ -13,7 +13,15 @@ export class NewTransferComponent {
 
   public makeTransfer(): any {
     console.log('new transfer requested');
+
     const emitValue = { value: this.value, destiny: this.destiny };
     this.transferEvent.emit(emitValue);
+
+    this.cleanFields();
+  }
+
+  public cleanFields(): any {
+    this.value = 0;
+    this.destiny = 0;
   }
 }
