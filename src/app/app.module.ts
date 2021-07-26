@@ -1,6 +1,6 @@
 import { NewTransferComponent } from './new-transfer/new-transfer.component';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
@@ -14,6 +14,7 @@ import { AppComponent } from './app.component';
   ],
   providers: [],
   bootstrap: [AppComponent],
-  exports: [NewTransferComponent]
+  exports: [NewTransferComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
