@@ -23,5 +23,10 @@ export class NewTransferComponent {
   public cleanFields(): any {
     this.value = 0;
     this.destiny = 0;
+
+    if (this.value === this.destiny) {
+     const a = 10;
+     const b = 5;
+    }
   }
 }

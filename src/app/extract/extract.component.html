@@ -1,7 +1,14 @@
-<div class="container-extract">
-  <ul *ngFor="let transfer of transferObj ">
-    <li>Date: {{transfer?.date }}</li>
-    <li>Value: {{transfer?.value }}</li>
-    <li>Destiny {{transfer?.destiny}}</li>
-  </ul>
-</div>
+<table>
+  <thead>
+    <th>Date</th>
+    <th>Value</th>
+    <th>Destiny</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let transfer of transferObj">
+      <td>{{ transfer.date | date: "short" }}</td>
+      <td>{{ transfer.value | currency }}</td>
+      <td>{{ transfer.destiny }}</td>
+    </tr>
+  </tbody>
+</table>
