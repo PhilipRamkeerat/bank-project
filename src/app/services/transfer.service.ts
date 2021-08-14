@@ -22,10 +22,10 @@ export class TransferService {
     return this.httpClient.get<Transference[]>(this.url);
   }
 
-  add(transfer: any): any {
+  add(transfer: Transference): Observable<Transference> {
     this.hydrate(transfer);
 
-    this.transferList.push(transfer);
+    return this.httpClient.post<Transference>(this.url, transfer);
   }
 
   private hydrate(transfers: any): any {

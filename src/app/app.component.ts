@@ -7,12 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'bank-project';
-  transferences: any[] = [];
-
-  constructor(private transferService: TransferService) {}
-
-  public transfer($event): any {
-    this.transferService.add($event);
-  }
+  constructor() {}
 }

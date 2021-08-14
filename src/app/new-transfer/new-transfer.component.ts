@@ -1,4 +1,6 @@
+import { Transference } from './../models/transference.model';
 import { Component, EventEmitter, Output } from '@angular/core';
+import { TransferService } from '../services/transfer.service';
 
 @Component({
   selector: 'app-new-transfer',
@@ -11,22 +13,27 @@ export class NewTransferComponent {
   value: number;
   destiny: number;
 
+  constructor(private transferService: TransferService) {}
+
   public makeTransfer(): any {
     console.log('new transfer requested');
 
-    const emitValue = { value: this.value, destiny: this.destiny };
-    this.transferEvent.emit(emitValue);
+    const emitValue: Transference = {
+      value: this.value,
+      destiny: this.destiny,
+    };
 
-    this.cleanFields();
+    this.transferService.add(emitValue).subscribe(
+      (result) => {
+        console.log(result);
+        this.cleanFields();
+      },
+      (error) => console.error(error)
+    );
   }
 
   public cleanFields(): any {
     this.value = 0;
     this.destiny = 0;
-
-    if (this.value === this.destiny) {
-     const a = 10;
-     const b = 5;
-    }
   }
 }
