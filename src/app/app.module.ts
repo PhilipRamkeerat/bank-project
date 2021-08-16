@@ -1,3 +1,4 @@
+import { AppRoutingModule } from './app-routing.module';
 import { NewTransferComponent } from './new-transfer/new-transfer.component';
 import { BrowserModule } from '@angular/platform-browser';
 import {
@@ -18,7 +19,7 @@ registerLocaleData(localePt, 'pt');
 
 @NgModule({
   declarations: [AppComponent, NewTransferComponent, ExtractComponent],
-  imports: [BrowserModule, FormsModule, HttpClientModule],
+  imports: [BrowserModule, FormsModule, HttpClientModule, AppRoutingModule],
   providers: [
     { provide: LOCALE_ID, useValue: 'pt' },
     { provide: DEFAULT_CURRENCY_CODE, useValue: 'BRL' },

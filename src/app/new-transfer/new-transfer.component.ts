@@ -1,6 +1,7 @@
 import { Transference } from './../models/transference.model';
 import { Component, EventEmitter, Output } from '@angular/core';
 import { TransferService } from '../services/transfer.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-new-transfer',
@@ -13,7 +14,10 @@ export class NewTransferComponent {
   value: number;
   destiny: number;
 
-  constructor(private transferService: TransferService) {}
+  constructor(
+    private transferService: TransferService,
+    private router: Router
+  ) {}
 
   public makeTransfer(): any {
     console.log('new transfer requested');
@@ -27,6 +31,7 @@ export class NewTransferComponent {
       (result) => {
         console.log(result);
         this.cleanFields();
+        this.router.navigateByUrl('extract');
       },
       (error) => console.error(error)
     );

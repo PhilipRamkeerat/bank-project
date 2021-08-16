@@ -1,8 +1,21 @@
-.bank-title {
-  color: var(--light-grey);
-  text-align: center;
+header {
+  background-color: var(--primary);
+  padding: 10px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .ativo {
+    display: none;
+  }
 }
 
-.body {
-  background-color:grey;
+main {
+  background-color: #fcfcfc;
+  padding: var(--padding);
 }

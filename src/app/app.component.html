@@ -1,3 +1,7 @@
-<h1 class="bank-title">BANK STUDY SYSTEM</h1>
-<app-new-transfer></app-new-transfer>
-<app-extract></app-extract>
+<header>
+  <a routerLink="extract">Bank</a>
+  <a routerLink="new-transfer" routerLinkActive="ativo">New Transfer</a>
+</header>
+<main>
+  <router-outlet></router-outlet>
+</main>
